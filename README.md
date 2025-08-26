@@ -1,4 +1,4 @@
-# LibSQL in Cloud Run + GCS:  Serverless SQLite over http
+# LibSQL in Cloud Run:  Serverless SQLite over http
 
 This repo gives you instructions and environment variables required to deploy LibSQL to Cloud Run in 'bottomless mode',
 with the DB streaming its WAL to GCS in S3 Compatibility Mode.
