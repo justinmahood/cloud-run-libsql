@@ -1,4 +1,4 @@
-# LibSQL in Cloud Run:  Serverless SQLite over http
+# [LibSQL](https://github.com/tursodatabase/libsql) in Cloud Run:  Serverless SQLite over http
 
 This repo gives you instructions and environment variables required to deploy LibSQL to Cloud Run in 'bottomless mode',
 with the DB streaming its WAL to GCS in S3 Compatibility Mode.
@@ -23,7 +23,7 @@ See the included .env file and replace the other values relevant for your projec
 
 ### Deploy to cloud run
 
-You can build and push the libsql Docker container from https://github.com/turso/libsql to your own Artifact Registry repo using `gcloud builds submit -t [tag]`, 
+You can build and push the libsql Docker container from https://github.com/tursodatabase/libsql to your own Artifact Registry repo using `gcloud builds submit -t [tag]`, 
 but this takes a long time (~30 min at default build speed).  You can also use the public image at gcr.io/jmahood-demo/libsql:latest 
 
 `gcloud beta run deploy libsql --image=gcr.io/jmahood-demo/libsql:latest --max=1 --min=0 --env-vars-file=.env --no-cpu-throttling`
