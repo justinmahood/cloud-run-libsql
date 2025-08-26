@@ -5,12 +5,11 @@ with the DB streaming its WAL to GCS in S3 Compatibility Mode.
 
 ### Prereqs:  Enable S3 Compatibility in GCS
 
-In the Google Cloud Console, go to Cloud Storage > Settings.
-
-Select the Interoperability Tab: Click on the Interoperability tab (You may need to enable this if you haven't used it previously)
-Under the section "Access keys for service accounts," click CREATE A KEY FOR A SERVICE ACCOUNT.
-Select a Service Account: Choose the service account that your Cloud Run service will use (the Default compute engine SA by default)
-Generate and Save Credentials: Click CREATE KEY. You will be shown an Access ID and a Secret. This is the only time the secret will be displayed. Copy both values.
+* In the Google Cloud Console, go to Cloud Storage > Settings.
+* Select the Interoperability Tab: Click on the Interoperability tab (You may need to enable this if you haven't used it previously)
+* Under the section "Access keys for service accounts," click CREATE A KEY FOR A SERVICE ACCOUNT.
+* Select a Service Account: Choose the service account that your Cloud Run service will use (the Default compute engine SA by default)
+* Generate and Save Credentials: Click CREATE KEY. You will be shown an Access ID and a Secret. This is the only time the secret will be displayed. Copy both values.
 
 In .env:
 - set AWS_ACCESS_KEY_ID to the Access ID.
